@@ -147,9 +147,13 @@ void loop() {
     strip.setPixelColor(0, strip.Color(0, 0, 0));
     strip.show();
   } else {
-    RGBColor color = get_palette_color(analogRead(A0) >> 2);
+    int ecg_reading = analogRead(A0);
+    RGBColor color = get_palette_color(ecg_reading >> 2);
     strip.setPixelColor(0, strip.Color(color.r, color.g, color.b));
     strip.show();
+
+    // Debug the raw data
+    Serial.println(ecg_reading);
   }
 }
 
