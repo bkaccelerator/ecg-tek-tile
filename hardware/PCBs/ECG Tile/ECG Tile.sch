@@ -1,0 +1,174 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ECG~Tile:Adafruit_Metro_Mini_328 U1
+U 1 1 5CFD74AD
+P 5650 2850
+F 0 "U1" H 5650 3675 50  0000 C CNN
+F 1 "Adafruit_Metro_Mini_328" H 5650 3584 50  0000 C CNN
+F 2 "ECG Tile:Adafruit_Metro_Mini_328" H 5650 2850 50  0001 C CNN
+F 3 "" H 5650 2850 50  0001 C CNN
+	1    5650 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L ECG~Tile:AD8232_Heart_Monitor_Sparkfun_Breakout U2
+U 1 1 5CFDAC00
+P 5650 5050
+F 0 "U2" H 5878 5096 50  0000 L CNN
+F 1 "AD8232_Heart_Monitor_Sparkfun_Breakout" H 5878 5005 50  0000 L CNN
+F 2 "ECG Tile:AD8232_Heart_Monitor_Sparkfun_Breakout" H 5600 5050 50  0001 C CNN
+F 3 "" H 5600 5050 50  0001 C CNN
+	1    5650 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 5CFDBE33
+P 6250 2000
+F 0 "#PWR0101" H 6250 1850 50  0001 C CNN
+F 1 "+3.3V" H 6265 2173 50  0000 C CNN
+F 2 "" H 6250 2000 50  0001 C CNN
+F 3 "" H 6250 2000 50  0001 C CNN
+	1    6250 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5CFDC8ED
+P 6350 3700
+F 0 "#PWR0102" H 6350 3450 50  0001 C CNN
+F 1 "GND" H 6355 3527 50  0000 C CNN
+F 2 "" H 6350 3700 50  0001 C CNN
+F 3 "" H 6350 3700 50  0001 C CNN
+	1    6350 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 2000 6250 3350
+Wire Wire Line
+	6250 3350 6150 3350
+Wire Wire Line
+	6150 3150 6350 3150
+Wire Wire Line
+	6350 3150 6350 3700
+Wire Wire Line
+	6150 3050 6350 3050
+Wire Wire Line
+	6350 3050 6350 3150
+Connection ~ 6350 3150
+$Comp
+L power:GND #PWR0103
+U 1 1 5CFDE159
+P 5150 5550
+F 0 "#PWR0103" H 5150 5300 50  0001 C CNN
+F 1 "GND" H 5155 5377 50  0000 C CNN
+F 2 "" H 5150 5550 50  0001 C CNN
+F 3 "" H 5150 5550 50  0001 C CNN
+	1    5150 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 5450 5150 5450
+Wire Wire Line
+	5150 5450 5150 5550
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 5CFDE8D6
+P 5150 4550
+F 0 "#PWR0104" H 5150 4400 50  0001 C CNN
+F 1 "+3.3V" H 5165 4723 50  0000 C CNN
+F 2 "" H 5150 4550 50  0001 C CNN
+F 3 "" H 5150 4550 50  0001 C CNN
+	1    5150 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 4550 5150 4650
+Wire Wire Line
+	5150 4650 5250 4650
+Wire Wire Line
+	6150 2750 6500 2750
+Wire Wire Line
+	6500 2750 6500 4150
+Wire Wire Line
+	6500 4150 5050 4150
+Wire Wire Line
+	5050 4150 5050 4750
+Wire Wire Line
+	5050 4750 5250 4750
+Wire Wire Line
+	5250 4850 4950 4850
+Wire Wire Line
+	5250 4950 4850 4950
+NoConn ~ 5250 5050
+NoConn ~ 5250 5150
+NoConn ~ 5250 5250
+NoConn ~ 5250 5350
+$Comp
+L Connector:Conn_01x03_Female J1
+U 1 1 5CFE4D8F
+P 4150 2750
+F 0 "J1" H 4042 2425 50  0000 C CNN
+F 1 "Conn_01x03_Female" H 4042 2516 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4150 2750 50  0001 C CNN
+F 3 "~" H 4150 2750 50  0001 C CNN
+	1    4150 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 5CFE6E9E
+P 4450 2400
+F 0 "#PWR0105" H 4450 2250 50  0001 C CNN
+F 1 "+3.3V" H 4465 2573 50  0000 C CNN
+F 2 "" H 4450 2400 50  0001 C CNN
+F 3 "" H 4450 2400 50  0001 C CNN
+	1    4450 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5CFE7D04
+P 4450 2950
+F 0 "#PWR0106" H 4450 2700 50  0001 C CNN
+F 1 "GND" H 4455 2777 50  0000 C CNN
+F 2 "" H 4450 2950 50  0001 C CNN
+F 3 "" H 4450 2950 50  0001 C CNN
+	1    4450 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 2650 4450 2650
+Wire Wire Line
+	4450 2650 4450 2400
+Wire Wire Line
+	4350 2850 4450 2850
+Wire Wire Line
+	4450 2850 4450 2950
+Wire Wire Line
+	4350 2750 5150 2750
+Text Notes 4100 2800 2    50   ~ 0
+Neopixel\nConnection
+Wire Wire Line
+	4950 2450 5150 2450
+Wire Wire Line
+	4950 2450 4950 4850
+Wire Wire Line
+	4850 2550 5150 2550
+Wire Wire Line
+	4850 2550 4850 4950
+$EndSCHEMATC

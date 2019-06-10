@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "ECG Tile")(type Legacy)(uri "${KIPRJMOD}/ECG Tile.lib")(options "")(descr ""))
+)
