@@ -14,7 +14,7 @@ typedef struct {
   float v;
 } HSVColor;
 
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(1, LED_PIN, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel feedback_led = Adafruit_NeoPixel(1, LED_PIN, NEO_GRB + NEO_KHZ800);
 
 // Adapted from https://stackoverflow.com/a/6930407
 HSVColor rgb_to_hsv(int r, int g, int b) {
@@ -133,9 +133,9 @@ void setup() {
   pinMode(11, INPUT); // Setup for leads off detection LO -
 
   // Initialize all pixels to off
-  strip.begin();
-  strip.setBrightness(50);
-  strip.show();
+  feedback_led.begin();
+  feedback_led.setBrightness(50);
+  feedback_led.show();
 
   Serial.println("Brooklyn Fashion and Design Accelerator");
   Serial.println("ECG Tile");
@@ -144,13 +144,13 @@ void setup() {
 void loop() {
   if(digitalRead(2) || digitalRead(3)) {
     // Turn off LEDs because no one is touching the tile
-    strip.setPixelColor(0, strip.Color(0, 0, 0));
-    strip.show();
+    feedback_led.setPixelColor(0, feedback_led.Color(0, 0, 0));
+    feedback_led.show();
   } else {
     int ecg_reading = analogRead(A0);
     RGBColor color = get_palette_color(ecg_reading >> 2);
-    strip.setPixelColor(0, strip.Color(color.r, color.g, color.b));
-    strip.show();
+    feedback_led.setPixelColor(0, feedback_led.Color(color.r, color.g, color.b));
+    feedback_led.show();
 
     // Debug the raw data
     Serial.println(ecg_reading);
